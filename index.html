@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rare Roots</title>
+  <meta charset="UTF-8">
+  <title>RareRoots Promotion</title>
 </head>
 <body>
-    <h1>Raaawr, Im a dinosaur</h1>
+
+  <!-- Hier kommt der Header rein -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <h2>Henlooo</h2>
+    <p>HRawwwr</p>
+  </main>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+      });
+  </script>
+
 </body>
 </html>
+
