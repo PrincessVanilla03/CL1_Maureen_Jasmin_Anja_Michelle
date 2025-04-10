@@ -12,3 +12,9 @@ header {
   flex-direction: column;
   justify-content: space-between;
 }
+
+#hero {
+  background-image: url("images/hero_image.png");
+}
+
+
