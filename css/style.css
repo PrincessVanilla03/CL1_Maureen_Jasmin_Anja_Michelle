@@ -1,4 +1,14 @@
 * {
-  font-family: "Yeseva One", Times, serif;
+  font-family: "Barlow", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Yeleva One", serif;
   font-weight: bold;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
