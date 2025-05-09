@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RareRoots Über Uns</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <!-- Hero Bild und Titel -->
+    <section id="hero">
+      <div class="overlay">
+        <h1>Über Uns</h1>
+      </div>
+    </section>
+    <!-- Intro Text -->
+    <section id="intro">
+      <h1>Cooler Titel</h1>
+      <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu!
+        Gelatooo po kass. Bappleees poopayee tulaliloo pepete belloo! Wiiiii.
+        Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass
+        baboiii. Belloo! hahaha baboiii poopayee hahaha belloo!
+      </p>
+    </section>
+    <!-- Image Slider -->
+    <section id="image_slider">
+      <h1>Dein Name in Blumensprache</h1>
+      <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu!
+        Gelatooo po kass. Bappleees poopayee tulaliloo pepete belloo! Wiiiii.
+      </p>
+      <img src="/images/hero_image.jpg" alt="Image" />
+    </section>
+
+    <section id="history">
+      <p>
+        Lass dich benachrichtigen, sobald unsere super tollen Pflanzen auf den
+        Markt kommen!Lass dich benachrichtigen, sobald unsere super tollen
+        Pflanzen auf den Markt kommen!Lass dich benachrichtigen, sobald unsere
+        super tollen Pflanzen auf den Markt kommen!
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Header laden
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        });
+
+      // Footer laden
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer-placeholder").innerHTML = html;
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RareRoots Kontakt</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <!-- Hero Bild und Titel -->
+    <section id="hero">
+      <div class="overlay">
+        <h1>Kontakt</h1>
+      </div>
+    </section>
+    <!-- Image Slider -->
+    <section id="contact_form">
+      <h1>Kontaktieren Sie uns!</h1>
+      <form action="">
+        <div>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Vorname"
+          />
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Nachname"
+          />
+        </div>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-Mail Adresse"
+        />
+        <input
+          type="text"
+          id="comment"
+          name="comment"
+          placeholder="Bemerkung"
+        />
+        <a href="">Abbrechen</a>
+        <input type="submit" value="Absenden" />
+      </form>
+    </section>
+
+    <section id="imprint">
+      <h1>RareRoots</h1>
+      <a href="mailto:info@rareroots.ch" target="_blank">info@rareroots.ch</a>
+      <a href="tel:+41 79 123 45 67" target="_blank">+41 79 123 45 67</a>
+      <p>Hauptstrasse 12 <br />6000 Luzern</p>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Header laden
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        });
+
+      // Footer laden
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer-placeholder").innerHTML = html;
+        });
+    </script>
+  </body>
+</html>
