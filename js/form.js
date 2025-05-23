@@ -4,12 +4,12 @@ const lastnameField = document.getElementById("lastname");
 const emailField = document.getElementById("email");
 
 submitButton.addEventListener("click", async (event) => {
-  event.prevenDefault();
+  event.preventDefault();
 
   await databaseClient.insertInto("user", {
     surname: surnameField.value,
     lastname: lastnameField.value,
-    email: lastnameField.value,
+    email: emailField.value,
   });
 
   alert("Es hat geklaappt! Yaaaaaay!");
