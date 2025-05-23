@@ -20,18 +20,32 @@
     <section id="contact_form">
       <h1>Kontaktieren Sie uns!</h1>
       <form>
+        <input type="radio" id="voter" name="subscription_type" value="voter" />
+        <label for="html"
+          >Ich möchte aktiv Teil der Entwicklung von RareRoots sein</label
+        ><br />
+        <input
+          type="radio"
+          id="watcher"
+          name="subscription_type"
+          value="watcher"
+        />
+        <label for="css">Ich möchte über Neuigkeiten informiert werden</label
+        ><br />
         <div>
           <input
             type="text"
             id="surname"
             name="surname"
             placeholder="Vorname"
+            required
           />
           <input
             type="text"
             id="lastname"
             name="lastname"
             placeholder="Nachname"
+            required
           />
         </div>
         <input
@@ -39,15 +53,18 @@
           id="email"
           name="email"
           placeholder="E-Mail Adresse"
+          required
         />
-        <input
-          type="text"
-          id="comment"
+        <textarea
+          rows="3"
+          cols="50"
           name="comment"
+          form="contact_form"
           placeholder="Bemerkung"
-        />
+        ></textarea>
+
         <a href="">Abbrechen</a>
-        <input type="submit" value="Absenden" />
+        <input id="submit" type="submit" value="Absenden" />
       </form>
     </section>
 
