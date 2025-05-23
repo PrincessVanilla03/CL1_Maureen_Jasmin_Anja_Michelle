@@ -9,22 +9,9 @@
   min-height: 120px;
 }
 
-.footer-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
 .footer p {
   font-size: 1.2rem;
+  margin: 0 15px;
 }
 
 .footer .info {
@@ -40,4 +27,11 @@
 
 .footer .back-link:hover {
   color: #feaea7;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
