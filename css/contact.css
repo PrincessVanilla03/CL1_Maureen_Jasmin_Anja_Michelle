@@ -1,0 +1,7 @@
+form {
+  max-width: 60%;
+}
+
+form input {
+  padding: 0.5em 1em 0.5em 0.5em;
+}
