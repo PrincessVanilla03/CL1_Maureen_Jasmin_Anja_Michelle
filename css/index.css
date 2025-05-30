@@ -113,6 +113,7 @@
 }
 
 .produkte_links {
+  display: flex;
   justify-content: space-between;
 }
 
