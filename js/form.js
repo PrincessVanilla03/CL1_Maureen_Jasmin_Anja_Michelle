@@ -1,9 +1,10 @@
-const submitButton = document.getElementById("submit");
-const surnameField = document.getElementById("surname");
-const lastnameField = document.getElementById("lastname");
-const emailField = document.getElementById("email");
+document.addEventListener("DOMContentLoaded", function () {
+  const submitButton = document.getElementById("submit");
+  const surnameField = document.getElementById("surname");
+  const lastnameField = document.getElementById("lastname");
+  const emailField = document.getElementById("email");
 
-submitButton.addEventListener("click", async (event) => {
+  submitButton.addEventListener("click", async (event) => {
   event.preventDefault();
 
   await databaseClient.insertInto("user", {
@@ -13,4 +14,5 @@ submitButton.addEventListener("click", async (event) => {
   });
 
   alert("Es hat geklaappt! Yaaaaaay!");
+  });
 });
