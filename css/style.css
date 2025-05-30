@@ -8,7 +8,7 @@ h1,
 h2 {
   font-family: "Yeleva One", serif;
   font-weight: bold;
-  color: #d4b57b;
+  color: white;
 }
 
 h1 {
@@ -20,7 +20,7 @@ p {
 }
 
 body {
-  background-color: white;
+  background-color: #9ba685;
   color: #2d360d;
 }
 
