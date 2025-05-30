@@ -1,73 +1,35 @@
-footer {
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      padding: 40px 20px;
-    }
-
-/*.footer {
+.footer-content {
   background-color: black;
   color: white;
-  text-align: center;
-  padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 120px;
-}*/
+  flex-direction: column;
+  padding: 40px 20px;
+}
 
-    .footer-column {
-      flex: 1;
-      padding: 0 20px;
-    }
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
 
-    /* Trennlinien */
-    .footer-column:not(:last-child) {
-      border-right: 1px solid white;
-    }
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
 
-    h3 {
-      margin-top: 0;
-    }
+.footer-column:not(:last-child) {
+  border-right: 1px solid white;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
 
-    li {
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive (optional) */
-    @media (max-width: 768px) {
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-column {
-        border-right: none;
-        border-bottom: 1px solid white;
-        padding: 20px 0;
-      }
-
-      .footer-column:last-child {
-        border-bottom: none;
-      }
-    }
-
-/*altes css*/
+.footer-bottom p,
+.footer-bottom a {
+  margin: 8px 0;
+}
 
 .footer .info {
   opacity: 0.7;
@@ -84,11 +46,19 @@ footer {
   color: #feaea7;
 }
 
-.footer-content {
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    border-right: none;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+  }
+
+  .footer-column:last-child {
+    border-bottom: none;
+  }
 }
