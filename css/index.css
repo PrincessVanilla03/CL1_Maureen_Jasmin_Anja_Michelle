@@ -77,7 +77,6 @@
 
 #produkte {
   text-align: center;
-  padding: 7% 15%;
 }
 
 #produkte img {
@@ -116,6 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 3% 3%;
 }
 
 .produkte_links img {
@@ -127,6 +127,7 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+  padding: 3% 3%;
 }
 
 #cta {
