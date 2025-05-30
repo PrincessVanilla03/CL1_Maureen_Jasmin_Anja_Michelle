@@ -96,7 +96,7 @@
 }
 
 #produkte h3 {
-  color: white;
+  color: #d4b57b;
   margin-bottom: 3%;
   font-size: 1.5rem;
 }
@@ -106,9 +106,8 @@
 }
 
 .produkte_overview {
-  gap: 2%;
   text-align: left;
-  padding: 7% 0% 0% 0%;
+  padding: 3% 0%;
 }
 
 .produkte_links {
