@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
     <link rel="stylesheet" href="css/header.css"/>
-    <script src="js/header.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -121,6 +120,10 @@
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("header-placeholder").innerHTML = html;
+          
+        const script = document.createElement('script');
+        script.src = 'js/header.js';
+        document.body.appendChild(script);
         });
 
       // Footer laden
