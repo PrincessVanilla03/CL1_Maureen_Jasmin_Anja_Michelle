@@ -63,6 +63,7 @@
 
 #produkte img {
   width: 80%;
+  background-color: #2d360d;
 }
 
 #produkte a {
@@ -90,7 +91,6 @@
 .produkte_overview {
   text-align: left;
   padding: 3% 0%;
-  background-color: #2d360d;
 }
 
 .produkte_links {
