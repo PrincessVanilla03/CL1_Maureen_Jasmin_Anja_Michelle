@@ -79,12 +79,13 @@
 }
 
 #produkte h3 {
-  color: #d4b57b;
+  color: white;
   margin-bottom: 3%;
   font-size: 1.5rem;
 }
 
 #produkte p {
+  color: white;
   margin-bottom: 3%;
 }
 
