@@ -3,7 +3,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  background-image: url("/images/hero_image.jpg");
+  background-image: url("images/plants.png");
 }
 
 .overlay {
@@ -12,7 +12,6 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: #2d360d;
   color: white;
   display: flex;
   align-items: left;
