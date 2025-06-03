@@ -57,24 +57,6 @@
   scale: 60%;
 }
 
-#namensspiel {
-  text-align: center;
-  padding: auto;
-  margin-top: 3%;
-  background-color: #2d360d;
-  color: white;
-}
-
-#namensspiel h1 {
-  color: #d4b57b;
-  margin-top: 3%;
-}
-
-#namensspiel p {
-  margin: 2% auto;
-  max-width: 60ch;
-}
-
 #produkte {
   text-align: center;
 }
