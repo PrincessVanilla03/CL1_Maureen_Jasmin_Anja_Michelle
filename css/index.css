@@ -59,11 +59,11 @@
 
 #produkte {
   text-align: center;
+  background-color: #2d360d;
 }
 
 #produkte img {
   width: 80%;
-  background-color: #2d360d;
 }
 
 #produkte a {
