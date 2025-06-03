@@ -3,7 +3,8 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  background-image: url("images/plants.png");
+  background-image: url(https://raw.githubusercontent.com/PrincessVanilla03/CL1_Maureen_Jasmin_Anja_Michelle/refs/heads/main/images/plants.png) rgba(45, 54, 13, 0.3);
+  background-blend-mode: multiply;
 }
 
 .overlay {
