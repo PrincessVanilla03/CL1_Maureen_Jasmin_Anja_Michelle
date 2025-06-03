@@ -1,9 +1,9 @@
 #hero {
   height: 60vh;
   position: relative;
-  background-size: cover;
   background-position: center;
-  background: url(https://raw.githubusercontent.com/PrincessVanilla03/CL1_Maureen_Jasmin_Anja_Michelle/refs/heads/main/images/plants.png) rgba(45, 54, 13, 0.3);
+  background: url(https://raw.githubusercontent.com/PrincessVanilla03/CL1_Maureen_Jasmin_Anja_Michelle/refs/heads/main/images/plants.png) rgba(45, 54, 13, 0.7);
+  background-size:cover;
   background-blend-mode: multiply;
 }
 
