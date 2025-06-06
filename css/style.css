@@ -57,6 +57,42 @@ a.link_button:hover {
   color: #2d360d;
 }
 
+#hero {
+  height: 60vh;
+  position: relative;
+  background-position: center;
+  background-size: stretch;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin: 5% 15% 0 15%;
+  color: #d4b57b;
+  text-align: left;
+}
+
+.overlay a {
+  font-size: 1.5rem;
+  margin: 1% 15% 0 15%;
+  max-width: 15%;
+  text-align: center;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -68,4 +104,30 @@ section {
 section p {
   margin: 2% auto;
   max-width: 60ch;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .overlay h1 {
+    font-size: 1.7rem;
+  }
+
+  .overlay a {
+    font-size: 0.5rem;
+  }
+
+  #hero {
+    height: 30vh;
+  }
 }
