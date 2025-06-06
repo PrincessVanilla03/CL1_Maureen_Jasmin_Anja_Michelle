@@ -1,55 +1,88 @@
-footer {
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      padding: 40px 20px;
-    }
+.footer-content {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
 
-    .footer-column {
-      flex: 1;
-      padding: 0 20px;
-    }
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
 
-    .footer-column:not(:last-child) {
-      border-right: 1px solid white;
-    }
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
 
-    h3 {
-      margin-top: 0;
-    }
+/* Weiße Trennlinie nur zwischen den beiden Spalten */
+.footer-column:first-child {
+  border-right: 1px solid white;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+h3 {
+  margin-top: 0;
+}
 
-    li {
-      margin-bottom: 10px;
-    }
+ul {
+  list-style: none;
+  padding: 0;
+}
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
+li {
+  margin-bottom: 10px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a {
+  color: white;
+  text-decoration: none;
+}
 
-    @media (max-width: 768px) {
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
+a:hover {
+  text-decoration: underline;
+}
 
-      .footer-column {
-        border-right: none;
-        border-bottom: 1px solid white;
-        padding: 20px 0;
-      }
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
 
-      .footer-column:last-child {
-        border-bottom: none;
-      }
-    }
+.footer-bottom p,
+.footer-bottom a {
+  margin: 8px 0;
+}
+
+.footer .info {
+  opacity: 0.7;
+}
+
+.footer .back-link {
+  text-decoration: none;
+  color: #d4b57b;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer .back-link:hover {
+  color: #feaea7;
+}
+
+/* Responsive Verhalten */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    border-right: none;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+  }
+
+  .footer-column:last-child {
+    border-bottom: none;
+  }
+}
