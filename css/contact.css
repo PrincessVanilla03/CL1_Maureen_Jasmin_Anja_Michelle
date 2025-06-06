@@ -1,9 +1,90 @@
-form {
-  max-width: 60%;
+#hero {
+  height: 60vh;
+  position: relative;
+  background-position: center;
+  background: url(https://raw.githubusercontent.com/PrincessVanilla03/CL1_Maureen_Jasmin_Anja_Michelle/refs/heads/main/images/plants.png)
+    rgba(45, 54, 13, 0.7);
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
-form input {
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin: 5% 15% 0 15%;
+  color: #d4b57b;
+  text-align: left;
+}
+
+#contact_form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+}
+
+#buttons {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+input,
+textarea {
+  background-color: white;
+  border: none;
+  color: #2d360d;
+  font-size: 1rem;
   padding: 0.5em 1em 0.5em 0.5em;
+  margin: 0.5rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #2d360d;
+}
+
+#names {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="radio"] {
+  appearance: none; /* remove default radio styles */
+  border: none;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  background-color: white;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2d360d;
+}
+
+#voter,
+#watcher {
+  padding: 0.5em;
 }
 
 .error {
@@ -18,12 +99,40 @@ form input {
 }
 
 @keyframes turn_red {
-  from {color: #2d360d;}
-  to {color: darkred;}
+  from {
+    color: #2d360d;
+  }
+  to {
+    color: darkred;
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: #2d360d;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0.5rem;
+}
+
+button:hover {
+  background-color: #d4b57b;
 }
 
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-  opacity: 0.6;  
+  opacity: 0.6;
+}
+
+#cancel {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+#cancel:hover {
+  text-decoration: underline;
 }
