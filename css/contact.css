@@ -131,8 +131,8 @@ button:disabled {
 #reset {
   font-size: 0.8rem;
   cursor: pointer;
-  background-color: none;
-  padding: 0.5em;
+  background-color: #9ba685;
+  padding: 1em 0 0 0;
   color: #2d360d;
 }
 
