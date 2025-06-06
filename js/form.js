@@ -85,7 +85,7 @@ form.addEventListener("submit", async (event) => {
 
   messageText.textContent = "Danke! Ihre Nachricht wurde erfolgreich gesendet.";
   messageText.className = "success";
-  form.reset();
+  document.getElementById("reset").click();
   submitButton.disabled = true;
 });
 
