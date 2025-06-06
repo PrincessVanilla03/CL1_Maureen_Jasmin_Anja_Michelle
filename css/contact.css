@@ -128,11 +128,14 @@ button:disabled {
   opacity: 0.6;
 }
 
-#cancel {
+#reset {
   font-size: 0.8rem;
   cursor: pointer;
+  background-color: none;
+  padding: 0.5em;
+  color: #2d360d;
 }
 
-#cancel:hover {
+#reset:hover {
   text-decoration: underline;
 }
