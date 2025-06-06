@@ -15,7 +15,7 @@
 button.prev, button.next {
   position: absolute;
   top: 50%;
-  background-color: rgba(155, 166, 133, 0.4);
+  background-color: rgba(155, 166, 133, 0.7);
   border: none;
   color: #2d360d;
   padding: 10px;
