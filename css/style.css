@@ -20,6 +20,21 @@ p {
   font-size: 1.2rem;
 }
 
+a {
+  text-decoration: none;
+  color: #2d360d;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #d4b57b;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #feaea7;
+}
+
 body {
   background-color: #9ba685;
   color: #2d360d;
@@ -47,6 +62,7 @@ section {
   flex-direction: column;
   text-align: center;
   padding: auto;
+  margin-top: 1em;
 }
 
 section p {
