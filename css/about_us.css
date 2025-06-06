@@ -1,3 +1,33 @@
+#hero {
+  height: 60vh;
+  position: relative;
+  background-position: center;
+  background: url(https://raw.githubusercontent.com/PrincessVanilla03/CL1_Maureen_Jasmin_Anja_Michelle/refs/heads/main/images/plants.png)
+    rgba(45, 54, 13, 0.7);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin: 5% 15% 0 15%;
+  color: #d4b57b;
+  text-align: left;
+}
+
 .slider {
   position: relative;
   margin: auto;
