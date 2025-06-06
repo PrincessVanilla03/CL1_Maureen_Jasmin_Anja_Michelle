@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>RareRoots Kontakt</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/contact.css"/>
-    <link rel="stylesheet" href="css/footer.css"/>
-    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <script src="js/databaseClient.js"></script>
     <script src="js/form.js" defer></script>
     <script src="js/header.js"></script>
@@ -24,13 +24,29 @@
     <section id="contact">
       <h1>Kontaktieren Sie uns!</h1>
       <form id="contact_form">
-        <input type="radio" id="voter" name="subscription_type" value="voter" required/>
-        <label for="voter"
-          >Ich möchte aktiv Teil der Entwicklung von RareRoots sein</label><br />
-        <input
-          type="radio" id="watcher" name="subscription_type" value="watcher"/>
-        <label for="watcher">Ich möchte über Neuigkeiten informiert werden</label><br />
         <div>
+          <input
+            type="radio"
+            id="voter"
+            name="subscription_type"
+            value="voter"
+            required
+          />
+          <label for="voter"
+            >Ich möchte aktiv Teil der Entwicklung von RareRoots sein</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="watcher"
+            name="subscription_type"
+            value="watcher"
+          />
+          <label for="watcher"
+            >Ich möchte über Neuigkeiten informiert werden</label
+          >
+        </div>
+        <div id="names">
           <input
             type="text"
             id="surname"
@@ -54,16 +70,16 @@
           required
         />
         <textarea
-          rows="3"
-          cols="50"
           id="comment"
           name="comment"
           form="contact_form"
           placeholder="Bemerkung"
         ></textarea>
 
-        <a href="">Abbrechen</a>
-        <button id="submit" type="submit">Absenden</button>
+        <div id="buttons">
+          <p id="cancel">Abbrechen</p>
+          <button id="submit" type="submit">Absenden</button>
+        </div>
       </form>
       <div id="message"></div>
     </section>
