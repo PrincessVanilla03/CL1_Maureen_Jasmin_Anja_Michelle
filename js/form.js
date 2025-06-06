@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameOK    = (txt) => txt.trim().length > 2;
   const commentOK = (txt) => txt.length === 0 || txt.length <= MAX_COMMENT_LEN;
 
-
   function validateForm() {
     messageText.textContent = "";
     messageText.className   = "";
@@ -26,12 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const email    = emailField.value.trim();
     const comment  = commentField.value.trim();
 
-    // --- individual checks ---
-    if (!nameOK(surname)) {
+    if (!surname && !lastname) {
+      showError("Bitte geben Sie einen Vor- oder Nachnamen ein.");
+      return;
+    }
+    if (surname && !nameOK(surname)) {
       showError("Der eingegebene Vorname ist zu kurz.");
       return;
     }
-    if (!nameOK(lastname)) {
+    if (lastname && !nameOK(lastname)) {
       showError("Der eingegebene Nachname ist zu kurz.");
       return;
     }
@@ -44,7 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // everything fine → enable button
+    const selectedInput = document.querySelector('input[name="subscription_type"]:checked');
+    if (!selectedInput) {
+      showError("Bitte wählen Sie eine Option aus.");
+      return;
+    }
+
     submitButton.disabled = false;
   }
 
@@ -58,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   [surnameField, lastnameField, emailField, commentField].forEach(el =>
     el.addEventListener("input", validateForm)
   );
+  document.querySelectorAll('input[name="subscription_type"]').forEach(rb =>
+    rb.addEventListener("change", validateForm)
+  );
 
   // Start with a disabled button
   submitButton.disabled = true;
@@ -66,28 +76,32 @@ document.addEventListener("DOMContentLoaded", () => {
   submitButton.addEventListener("click", async (event) => {
     event.preventDefault();
 
-    const selectedInput = document.querySelector('input[name="subscription_type"]:checked');
-    if (!selectedInput) {
-      showError("Bitte wählen Sie eine Option aus.");
-      return;
-    }
-
-    // safety net: run one last validation
     validateForm();
-    if (submitButton.disabled) return;   // stop if validation just failed
+    if (submitButton.disabled) return;
 
-    await databaseClient.insertInto("user", {
-      surname: surnameField.value.trim(),
-      lastname: lastnameField.value.trim(),
-      email: emailField.value.trim(),
-      subscription_type: selectedInput.value,
-      comment: commentField.value.trim(),
-    });
+    const selectedInput = document.querySelector('input[name="subscription_type"]:checked');
 
-    // success feedback + reset
-    messageText.textContent = "Danke! Ihre Nachricht wurde erfolgreich gesendet.";
-    messageText.className   = "success";
-    form.reset();
-    submitButton.disabled = true; 
+    try {
+      await databaseClient.insertInto("user", {
+        surname: DOMPurify.sanitize(surnameField.value.trim()),
+        lastname: DOMPurify.sanitize(lastnameField.value.trim()),
+        email: DOMPurify.sanitize(emailField.value.trim()),
+        subscription_type: selectedInput.value, // no need to sanitize here, it's a radio
+        comment: DOMPurify.sanitize(commentField.value.trim()),
+      });
+
+
+      messageText.textContent = "Danke! Ihre Nachricht wurde erfolgreich gesendet.";
+      messageText.className   = "success";
+      form.reset();
+      submitButton.disabled = true;
+    } catch (error) {
+      console.error("Fehler beim Speichern:", error);
+      if (error.message.includes("duplicate") || error.message.includes("UNIQUE")) {
+        showError("Diese E-Mail-Adresse wurde bereits verwendet.");
+      } else {
+        showError("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.");
+      }
+    }
   });
 });
