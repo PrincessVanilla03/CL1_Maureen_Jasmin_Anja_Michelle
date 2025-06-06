@@ -5,3 +5,25 @@ form {
 form input {
   padding: 0.5em 1em 0.5em 0.5em;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+  animation-name: turn_red;
+  animation-duration: 1s;
+}
+
+.success {
+  color: #2d360d;
+}
+
+@keyframes turn_red {
+  from {color: #2d360d;}
+  to {color: darkred;}
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;  
+}
