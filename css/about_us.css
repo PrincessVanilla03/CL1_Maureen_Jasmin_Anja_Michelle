@@ -1,8 +1,6 @@
 .slider {
   position: relative;
-  max-width: 600px;
   margin: auto;
-  overflow: hidden;
 }
 
 .slide {
@@ -17,24 +15,24 @@
 button.prev, button.next {
   position: absolute;
   top: 50%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: none;
   border: none;
-  color: white;
+  color: #2d360d;
   padding: 10px;
   cursor: pointer;
   transform: translateY(-50%);
-  font-size: 18px;
+  font-size: 2em;
   user-select: none;
 }
 
 button.prev {
-  left: 10px;
+  left: 0;
 }
 
 button.next {
-  right: 10px;
+  right: 0;
 }
 
 button.prev:hover, button.next:hover {
-  background-color: rgba(0,0,0,0.8);
+  color: #d4b57b;
 }
