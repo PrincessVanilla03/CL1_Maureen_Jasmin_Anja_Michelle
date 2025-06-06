@@ -13,18 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ❌ If no radio selected
     if (!selectedInput) {
-      messageDiv.textContent = "Bitte wählen Sie eine Option aus.";
+      messageText.textContent = "Bitte wählen Sie eine Option aus.";
       return;
     }
-
-    const selectedType = selectedInput.value;
 
     // ✅ Insert into database
     await databaseClient.insertInto("user", {
       surname: surnameField.value,
       lastname: lastnameField.value,
       email: emailField.value,
-      subscription_type: selectedType,
+      subscription_type: selectedInput.value,
       comment: commentField.value,
     });
 
