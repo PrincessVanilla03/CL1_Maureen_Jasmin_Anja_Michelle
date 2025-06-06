@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailField    = document.getElementById("email");
   const commentField  = document.getElementById("comment");       
   const messageText   = document.getElementById("message");
-  const cancelButton = document.getElementById("cancel");
 
   // ---------- Max Comment Length ----------
   const MAX_COMMENT_LEN = 500;    
@@ -84,9 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       subscription_type: selectedInput.value, // no need to sanitize here, it's a radio
       comment: commentField.value.trim(),
     });
-    cancelButton.addEventListener("click", async (event) => {
-    form.reset();
-    }
 
 
     // success feedback + reset
