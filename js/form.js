@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailField    = document.getElementById("email");
   const commentField  = document.getElementById("comment");       
   const messageText   = document.getElementById("message");
+  const cancelButton = document.getElementById("cancel");
 
   // ---------- Max Comment Length ----------
   const MAX_COMMENT_LEN = 500;    
@@ -77,12 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (submitButton.disabled) return;   // stop if validation just failed
 
     await databaseClient.insertInto("user", {
-      surname: DOMPurify.sanitize(surnameField.value.trim()),
-      lastname: DOMPurify.sanitize(lastnameField.value.trim()),
-      email: DOMPurify.sanitize(emailField.value.trim()),
+      surname: surnameField.value.trim(),
+      lastname: lastnameField.value.trim(),
+      email: emailField.value.trim(),
       subscription_type: selectedInput.value, // no need to sanitize here, it's a radio
-      comment: DOMPurify.sanitize(commentField.value.trim()),
+      comment: commentField.value.trim(),
     });
+    cancelButton.addEventListener("click", async (event) => {
+    form.reset();
+    }
 
 
     // success feedback + reset
